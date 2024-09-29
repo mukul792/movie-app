@@ -1,6 +1,8 @@
 ```
 🎥 Movie Guide App
 
+live preview: https://mukul792.github.io/movie-app/
+
 🚀 Overview
 The Movie Info App is a responsive web application that allows users to search for movie details by title.
 It fetches data such as Title, IMDb Rating, Genre, Released Date, Runtime, Cast, Plot, and Poster from the OMDb API and displays the information in a clean and responsive interface.
