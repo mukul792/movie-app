@@ -1,7 +1,7 @@
 ```
 🎥 Movie Guide App
 
-live preview: https://mukul792.github.io/movie-app/
+live preview: (https://mukul792.github.io/movie-app/)
 
 🚀 Overview
 The Movie Info App is a responsive web application that allows users to search for movie details by title.
