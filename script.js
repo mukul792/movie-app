@@ -55,7 +55,7 @@ const showMovieData = ({
   Language,
   Country,
   Rated,
-  Director
+  Director,
 }) => {
   movieContainer.innerHTML = "";
   movieContainer.classList.remove("no-background");
@@ -99,7 +99,7 @@ searchForm.addEventListener("submit", (e) => {
     : showErrorMessage("Enter movie name to get movie information");
 });
 
-// Fetch movie name suggestions
+// Fetch movie name suggestions with year
 const getSuggestions = async (query) => {
   if (!query) {
     suggestionsList.style.display = "none";
@@ -114,7 +114,7 @@ const getSuggestions = async (query) => {
   suggestionsList.innerHTML = data.Search
     ? data.Search.map(
         (movie) => `
-        <li>${movie.Title}</li>
+        <li>${movie.Title} (${movie.Year})</li>
     `
       ).join("")
     : "";
@@ -126,10 +126,17 @@ const getSuggestions = async (query) => {
       inputBox.value = li.textContent;
       suggestionsList.style.display = "none";
       showErrorMessage("Fetching Movie Information...");
-      getMovieInfo(li.textContent);
+      getMovieInfo(li.textContent.split(" (")[0]); // Extract only the title without the year
     });
   });
 };
+
+// Event listener to close the suggestion box when clicked anywhere on the screen
+document.addEventListener("click", (e) => {
+  if (!inputBox.contains(e.target) && !suggestionsList.contains(e.target)) {
+    suggestionsList.style.display = "none";
+  }
+});
 
 // Event listener for typing in search bar
 inputBox.addEventListener("input", () => {
