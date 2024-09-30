@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
-  margin: 0; padding: 0; box-sizing: border-box; font-family: "Roboto Slab", serif;
+  margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -25,6 +25,9 @@ body.dark-theme input, body.dark-theme .search-container input {
 body.dark-theme button {
   background-color: #06bcc1;
 }
+body.light-theme button {
+  background-color: #06bcc1;
+}
 
 #theme-toggle {
   background: none; border: none; font-size: 24px; cursor: pointer; color: inherit;
@@ -42,17 +45,19 @@ body.dark-theme nav {
 }
 
 .search-container button {
-  background: #06bcc1; cursor: pointer;
+  cursor: pointer;
 }
 .search-container input {
   width: 310px;
 }
-
+.search-container button:hover {
+  background-color: #2ecc71;
+}
 main {
   max-width: 1200px; margin: 0 auto; margin-block: 38px;
 }
 main section {
-  display: flex; justify-content: center; align-items: center; min-height: 76vh;
+  display: flex; justify-content: center; align-items: center; min-height: 75vh;
 }
 .movie-container {
   display: flex; justify-content: center; background: white; box-shadow: 0px 0px 10px #ccc; width: 80%; border-radius: 5px;
