@@ -57,7 +57,7 @@ main {
   max-width: 1200px; margin: 0 auto; margin-block: 38px;
 }
 main section {
-  display: flex; justify-content: center; align-items: center; min-height: 74vh;
+  display: flex; justify-content: center; align-items: center; min-height: 73vh;
 }
 .movie-container {
   display: flex; justify-content: center; background: white; box-shadow: 0px 0px 10px #ccc; width: 80%; border-radius: 5px;
@@ -114,11 +114,19 @@ body.dark-theme .suggestions-list li { color: #e0e0e0; }
   }
   .movie-info { padding-inline: 30px; }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 690px) {
   .navbar { flex-direction: column; justify-content: center; align-items: center; }
   .search-container { margin-top: 12px; }
+  .movie-genre {
+    display: flex;
+    margin-block: 5px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 430px) {
+  .navbar { flex-direction: column; justify-content: center; align-items: center; text-align: center ;}
+  button {margin-top: 15px;}
   .movie-genre {
     display: flex;
     margin-block: 5px;
