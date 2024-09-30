@@ -117,20 +117,11 @@ body.dark-theme .suggestions-list li { color: #e0e0e0; }
 @media screen and (max-width: 690px) {
   .navbar { flex-direction: column; justify-content: center; align-items: center; }
   .search-container { margin-top: 12px; }
-  .movie-genre {
-    display: flex;
-    margin-block: 5px;
-    overflow-x: auto;
-    justify-content: flex-start;
-  }
+  .movie-genre { display: flex; margin-block: 5px; overflow-x: auto; justify-content: flex-start; }
 }
 @media screen and (max-width: 430px) {
   .navbar { flex-direction: column; justify-content: center; align-items: center; text-align: center ;}
   button {margin-top: 15px;}
-  .movie-genre {
-    display: flex;
-    margin-block: 5px;
-    overflow-x: auto;
-    justify-content: flex-start;
-  }
+  .movie-genre { display: flex; margin-block: 5px; overflow-x: auto; justify-content: flex-start; }
+  .suggestions-list { max-width: 90%; left: 50%; transform: translateX(-50%);}
 }
