@@ -52,6 +52,10 @@ const showMovieData = ({
   Actors,
   Plot,
   Poster,
+  Language,
+  Country,
+  Rated,
+  Director
 }) => {
   movieContainer.innerHTML = "";
   movieContainer.classList.remove("no-background");
@@ -59,10 +63,14 @@ const showMovieData = ({
   const movieElement = document.createElement("div");
   movieElement.classList.add("movie-info");
   movieElement.innerHTML = `<h2>${Title}</h2>
-        <p><strong>Rating: &#11088;</strong>${imdbRating}</p>
+        <p><strong>IMDB Rating: &#11088;</strong>${imdbRating}</p>
         <div class="movie-genre">${Genre.split(",")
           .map((g) => `<p>${g.trim()}</p>`)
           .join("")}</div>
+        <p><strong>Rated:</strong> ${Rated}</p>
+        <p><strong>Director:</strong> ${Director}</p>
+        <p><strong>Language:</strong> ${Language}</p>
+        <p><strong>Country:</strong> ${Country}</p>
         <p><strong>Released Date: </strong>${Released}</p>
         <p><strong>Duration: </strong>${Runtime}</p>
         <p><strong>Cast: </strong>${Actors}</p>
