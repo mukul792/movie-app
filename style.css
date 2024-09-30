@@ -112,3 +112,11 @@ body.dark-theme .suggestions-list li { color: #e0e0e0; }
   .navbar { flex-direction: column; justify-content: center; align-items: center; }
   .search-container { margin-top: 12px; }
 }
+@media screen and (max-width: 530px) {
+  .movie-genre {
+    display: flex;
+    margin-block: 5px;
+    overflow-x: auto;
+    justify-content: flex-start; 
+  }
+}
