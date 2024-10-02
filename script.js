@@ -28,18 +28,24 @@ const movieTitles = [
 
 // Theme toggle functionality
 const toggleTheme = () => {
+  const isDarkTheme = document.body.classList.contains("dark-theme");
   document.body.classList.toggle("dark-theme");
-  themeIcon.classList.toggle("fa-sun");
-  themeIcon.classList.toggle("fa-moon");
-  localStorage.setItem("theme", document.body.className);
+  themeIcon.classList.toggle("fa-sun", !isDarkTheme);
+  themeIcon.classList.toggle("fa-moon", isDarkTheme);
+  localStorage.setItem("theme", isDarkTheme ? "light-theme" : "dark-theme");
 };
 
 // Load saved theme preference
 const loadThemePreference = () => {
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.body.className = savedTheme;
-    themeIcon.classList.toggle("fa-moon", savedTheme.includes("dark"));
+  if (savedTheme === "dark-theme") {
+    document.body.classList.add("dark-theme");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+  } else {
+    document.body.classList.remove("dark-theme");
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
   }
 };
 
@@ -247,5 +253,7 @@ document.addEventListener("click", (e) => {
 });
 
 // Initialize the app
-loadThemePreference();
-document.addEventListener("DOMContentLoaded", fetchMoviesOnLoad);
+document.addEventListener("DOMContentLoaded", () => {
+  loadThemePreference();
+  fetchMoviesOnLoad();
+});
