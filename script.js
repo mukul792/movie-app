@@ -110,6 +110,7 @@ const showMovieDetailsModal = async (title) => {
       Released,
       Runtime,
       Actors,
+      imdbVotes,
       Plot,
       Director,
       Country,
@@ -121,7 +122,7 @@ const showMovieDetailsModal = async (title) => {
     ).innerHTML = `<img src="${Poster}" alt="${Title} Poster"/>`;
     document.querySelector("#movie-details .movie-info").innerHTML = `
       <h2>${Title}</h2>
-      <p><strong>IMDB Rating:</strong> ⭐ ${imdbRating}</p>
+      <p><strong>IMDB Rating:</strong> ⭐ ${imdbRating} (${imdbVotes} votes)</p>
       <div class="movie-genre">
         ${Genre.split(",")
           .map((g) => `<span>${g.trim()}</span>`)
@@ -151,6 +152,7 @@ const showSearchResult = (movieData) => {
     Released,
     Runtime,
     Actors,
+    imdbVotes,
     Plot,
     Director,
     Country,
@@ -163,7 +165,7 @@ const showSearchResult = (movieData) => {
     </div>
     <div class="movie-info">
       <h2>${Title}</h2>
-      <p><strong>IMDB Rating:</strong> ⭐ ${imdbRating}</p>
+      <p><strong>IMDB Rating:</strong> ⭐ ${imdbRating} (${imdbVotes} votes)</p>
       <div class="movie-genre">
         ${Genre.split(",")
           .map((g) => `<span>${g.trim()}</span>`)
