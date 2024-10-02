@@ -10,7 +10,7 @@ const modal = document.getElementById("movie-details-modal");
 const closeBtn = document.querySelector(".close");
 
 // API key for OMDB
-const myApiKey = "1a0c2167";
+const myApiKey = "39c9486d";
 
 // List of popular movie titles for initial display
 const movieTitles = [
