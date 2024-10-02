@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOVIE GUIDE APP</title>
+    <title>Movie Guide App</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body class="light-theme">
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="light-theme">
+    <!-- Navigation bar -->
     <nav>
-        <div class="navbar">
-            <h1 class="logo">MOVIE GUIDE APP</h1>
-            <div class="search-container">
-                <form action="">
-                    <input type="text" placeholder="search movie" class="inputbox" />
-                    <button type="submit">search</button>
-                </form>
-                <ul id="suggestions-list" class="suggestions-list"></ul>
-            </div>
-            <button id="theme-toggle">
-                <span id="theme-icon">🌞</span>
-            </button>
+      <div class="navbar">
+        <h1 class="logo">MOVIE GUIDE APP</h1>
+        <div class="search-container">
+          <form action="">
+            <input type="text" placeholder="Search movie" class="inputbox" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <ul id="suggestions-list" class="suggestions-list"></ul>
         </div>
+        <button id="theme-toggle">
+          <i id="theme-icon" class="fas fa-sun"></i>
+        </button>
+      </div>
     </nav>
+
+    <!-- Main content area -->
     <main>
-        <section>
-            <div class="movie-container no-background">
-                <h2>search for movie information...</h2>
-            </div>
-        </section>
+      <!-- Movie container for displaying movie cards -->
+      <section>
+        <div class="movie-container">
+          <!-- Movies will be dynamically added here -->
+        </div>
+      </section>
+      <!-- Search result section -->
+      <section
+        id="search-result"
+        class="movie-details-flex"
+        style="display: none"
+      >
+        <!-- Search result will be displayed here -->
+      </section>
     </main>
+
+    <!-- Movie details modal -->
+    <div id="movie-details-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="movie-details" class="movie-details-flex">
+          <div class="movie-poster"></div>
+          <div class="movie-info"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Movie Guide App</p>
+      <p>&copy; 2024 Movie Guide App</p>
     </footer>
+
+    <!-- JavaScript file -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
