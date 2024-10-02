@@ -1,5 +1,5 @@
 ```
-🎥 Movie Guide App
+🎥 CineVerse
 
 🚀 Overview
 The Movie Info App is a responsive web application that allows users to search for movie details by title.
